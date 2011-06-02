@@ -1,0 +1,17 @@
+<% title "Bookshelves" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for bookshelf in @bookshelves %>
+    <tr>
+      <td><%= bookshelf.name %></td>
+      <td><%= link_to "Show", bookshelf %></td>
+      <td><%= link_to "Edit", edit_bookshelf_path(bookshelf) %></td>
+      <td><%= link_to "Destroy", bookshelf, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bookshelf", new_bookshelf_path %></p>

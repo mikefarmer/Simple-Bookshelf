@@ -1,0 +1,18 @@
+<%= form_for @bookshelf do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <% @books.each do |book| %>
+    <%= check_box_tag "books[#{book.id}]", "1", @bookshelf.books.include?(book)  %>
+    <%= book.name %>
+    <br>
+  <% end -%>
+
+
+
+
+  <p><%= f.submit %></p>
+<% end %>

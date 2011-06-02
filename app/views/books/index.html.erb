@@ -1,0 +1,19 @@
+<% title "Books" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bookshelf</th>
+  </tr>
+  <% for book in @books %>
+    <tr>
+      <td><%= book.name %></td>
+      <td><%= book.bookshelf_id %></td>
+      <td><%= link_to "Show", book %></td>
+      <td><%= link_to "Edit", edit_book_path(book) %></td>
+      <td><%= link_to "Destroy", book, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Book", new_book_path %></p>

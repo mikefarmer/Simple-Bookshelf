@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bookshelf_id: 1
+  book_id: 1
+
+two:
+  bookshelf_id: 1
+  book_id: 1

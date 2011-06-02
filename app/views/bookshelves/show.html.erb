@@ -1,0 +1,20 @@
+<% title "Bookshelf" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bookshelf.name %>
+</p>
+<p>
+  <strong>Books</strong>
+  <ul>
+  <% @bookshelf.books.each do |book|%>
+    <li><%= book.name %></li>
+  <% end -%>
+  </ul>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bookshelf_path(@bookshelf) %> |
+  <%= link_to "Destroy", @bookshelf, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", bookshelves_path %>
+</p>
